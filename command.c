@@ -15,7 +15,7 @@ void excCmd(const char *cmd)
 	}
 	else if (pid == 0)
 	{
-		ececl("/bin/sh", "sh", "-c", cmd, NULL);
+		execl("/bin/sh", "sh", "-c", cmd, NULL);
 		perror("Exec failed");
 		exit(EXIT_FAILURE);
 	}

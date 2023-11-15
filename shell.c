@@ -40,17 +40,17 @@ int main() {
 		if (strncmp(command, "cd ", 3) == 0)
 		{
 			const char* dir = command + 3;
-			chngeDir(directory);
+			chngeDir(dir);
 			continue;
 		}
 
 		if (strcmp(command, "pwd") == 0)
 		{
-			hndlePwd();
+			hndlPwd();
 			continue;
 		}
 
-		exeCmd(command);
+		exCmd(command);
 	}
 
 	return (0);
