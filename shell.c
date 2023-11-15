@@ -9,19 +9,16 @@
 
 #define MAX_COMMAND_LENGTH 100
 
-int main() {
+int main(void)
+{
 	char command[MAX_COMMAND_LENGTH];
 
-	while (1) 
+	while (1)
 	{
 		printf("$ ");
 		fflush(stdout);
-
-
 		if (fgets(command, sizeof(command), stdin) == NULL)
-		{
 			break;
-		}
 
 		snline(command);
 
@@ -39,7 +36,8 @@ int main() {
 
 		if (strncmp(command, "cd ", 3) == 0)
 		{
-			const char* dir = command + 3;
+			const char *dir = command + 3;
+
 			chngeDir(dir);
 			continue;
 		}
@@ -52,6 +50,5 @@ int main() {
 
 		excCmd(command);
 	}
-
 	return (0);
 }

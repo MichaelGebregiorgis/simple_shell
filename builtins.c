@@ -4,24 +4,24 @@
 #include <unistd.h>
 #include "header.h"
 
-extern char **environ;
 
-void hndlExit()
+void hndlExit(void)
 {
 	exit(EXIT_SUCCESS);
 }
 
-void hndlEnv()
+void hndlEnv(char **environ)
 {
 	char **env = environ;
-	while (*env) 
+
+	while (*env)
 	{
 		printf("%s\n", *env);
-		env;
+		env++;
 	}
 }
 
-void chngeDir(const char* dir)
+void chngeDir(const char *dir)
 {
 	if (chdir(dir) != 0)
 	{
@@ -29,12 +29,13 @@ void chngeDir(const char* dir)
 	}
 }
 
-void hndlPwd()
+void hndlPwd(void)
 {
 	char cwd[1024];
+
 	if (getcwd(cwd, sizeof(cwd)) != NULL)
 	{
-		printf("%sn", cwd);
+		printf("%s\n", cwd);
 	}
 	else
 	{

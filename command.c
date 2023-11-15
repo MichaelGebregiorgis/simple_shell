@@ -22,6 +22,7 @@ void excCmd(const char *cmd)
 	else
 	{
 		int stat;
+
 		waitpid(pid, &stat, 0);
 	}
 }
