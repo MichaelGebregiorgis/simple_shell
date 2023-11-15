@@ -8,7 +8,7 @@ extern char **environ;
 
 void hndlExit()
 {
-	exit(EXIST_SUCCESS);
+	exit(EXIT_SUCCESS);
 }
 
 void hndlEnv()
@@ -23,7 +23,7 @@ void hndlEnv()
 
 void chngeDir(const char* dir)
 {
-	if (chdir(directory) != 0)
+	if (chdir(dir) != 0)
 	{
 		perror("chdir failed");
 	}
