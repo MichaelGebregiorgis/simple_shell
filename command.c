@@ -4,6 +4,10 @@
 #include <sys/wait.h>
 #include "header.h"
 
+/**
+ * excCmd - execute command
+ * Return: 0
+ */
 void excCmd(const char *cmd)
 {
 	pid_t pid = fork();

@@ -4,12 +4,19 @@
 #include <unistd.h>
 #include "header.h"
 
-
+/**
+ * hndlExit - exist success check
+ * Return: 0
+ */
 void hndlExit(void)
 {
 	exit(EXIT_SUCCESS);
 }
 
+/**
+ * hndlEnv - enviroment list check
+ * Return: 0
+ */
 void hndlEnv(char **environ)
 {
 	char **env = environ;
@@ -21,6 +28,10 @@ void hndlEnv(char **environ)
 	}
 }
 
+/**
+ * chngeDir - directory changed
+ * Return: 0
+ */
 void chngeDir(const char *dir)
 {
 	if (chdir(dir) != 0)
@@ -29,6 +40,10 @@ void chngeDir(const char *dir)
 	}
 }
 
+/**
+ * hndlPwd - path handled
+ * Return: 0
+ */
 void hndlPwd(void)
 {
 	char cwd[1024];

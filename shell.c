@@ -8,7 +8,10 @@
 #include "header.h"
 
 #define MAX_COMMAND_LENGTH 100
-
+/**
+ * main - command line
+ * Return: 0
+ */
 int main(void)
 {
 	char command[MAX_COMMAND_LENGTH];
