@@ -3,6 +3,7 @@
 
 /**
  * snline - stripeNewLine
+ * @str: Data type
  * Return: 0
  */
 void snline(char *str)

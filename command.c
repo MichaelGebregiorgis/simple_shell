@@ -6,6 +6,7 @@
 
 /**
  * excCmd - execute command
+ * @cmd: Data type
  * Return: 0
  */
 void excCmd(const char *cmd)

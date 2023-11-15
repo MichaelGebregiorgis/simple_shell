@@ -15,6 +15,7 @@ void hndlExit(void)
 
 /**
  * hndlEnv - enviroment list check
+ * @environ: Data type
  * Return: 0
  */
 void hndlEnv(char **environ)
@@ -30,6 +31,7 @@ void hndlEnv(char **environ)
 
 /**
  * chngeDir - directory changed
+ * @dir: Data type
  * Return: 0
  */
 void chngeDir(const char *dir)
