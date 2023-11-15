@@ -50,7 +50,7 @@ int main() {
 			continue;
 		}
 
-		exCmd(command);
+		excCmd(command);
 	}
 
 	return (0);
