@@ -3,24 +3,25 @@
 #include <string.h>
 #include <unistd.h>
 
-int main(int ac, char**argv)
+int main(int ac, char **argv)
 {
 	char *prompt = "(Eshell)$";
 	char *lineptr = NULL, *lineptr_copy = NULL;
 	size_t n = 0;
 	ssize_t nchars_read;
 	const char *delim = " \n";
+
 	int num tokens = 0;
 	char *token;
 	int i;
 
-	printf("%s",prompt);
+	printf("%s", prompt);
 	nchars_read = getline(&lineptr, &n, stdin);
 	if (nchars_read == -1)
 		printf("Exiting shell....\n");
-	return(-1);
+	return (-1);
 }
-lineptr_copy = malloc(size of(char)* nchars_read);
+lineptr_copy = malloc(size of(char) * nchars_read);
 if (lineptr_copy == NULL)
 {
 	perror("tsh: memory allocation error");
@@ -34,9 +35,9 @@ while (token != NULL)
 	token = strtok(NULL, delim);
 }
 num_tokens++;
-argv = malloc(sizeof(char*)*num_tokens);
+argv = malloc(sizeof(char *) * num_tokens);
 
-for(i = 0; token != NULL; i++)
+for (i = 0; token != NULL; i++)
 {
 	argv[i] = malloc(sizeof(char) * strlen(token));
 	strcpy(argv[i], token);
@@ -52,4 +53,3 @@ free(lineptr);
 
 return (0);
 }
-		
